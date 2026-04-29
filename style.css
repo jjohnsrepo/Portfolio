@@ -10,6 +10,7 @@
     color: #333;
     line-height: 1.6;
     padding: 20px;
+  
   }
   
   header {
@@ -28,20 +29,33 @@
   }
   
   main {
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
   }
+
+.projects{
+  display:flex;
+  justify-content: space-between;
+  gap: 40px;
+}
   
-  .projects {
+  .written_projects,
+  .ai_projects {
+    flex: 1;
+    min-width: 0;
     margin-bottom: 40px;
   }
+
+  .written_projects {
+    margin-right: 80px;
+  }
   
-  .projects h2,
-  .contact h2 {
+  .written_projects h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
+  }
+
+  .ai_projects h2{
+    font-size: 2rem;
   }
   
   .project {
@@ -69,10 +83,19 @@
   .project a:hover {
     text-decoration: underline;
   }
+
+  .contact h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+  }
   
   .contact p {
     margin-bottom: 10px;
   }
+
+
 
 .about {
   background-color: #fff;
@@ -93,4 +116,45 @@
   font-size: 1.05rem;
   color: #444;
 }
-  
+
+  @media (max-width: 900px) {
+    .projects {
+      flex-direction: column;
+    }
+
+    .written_projects {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+
+    main {
+      padding: 0 10px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p,
+    .project p,
+    .about p,
+    .contact p {
+      font-size: 1rem;
+    }
+
+    .project,
+    .about,
+    .contact {
+      padding: 18px;
+      margin-bottom: 25px;
+    }
+
+    .project {
+      padding: 18px;
+    }
+  }
