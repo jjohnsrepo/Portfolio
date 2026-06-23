@@ -8,133 +8,276 @@
 </head>
 <body>
 
-  <header>
-    <h1>Justin Johnson</h1>
-    <p>Computer Science Student</p>
+  <header class="hero">
+    <div class="hero__layout">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Portfolio</p>
+        <h1>Justin Johnson</h1>
+        <p class="hero__tagline">Full stack developer</p>
+        <p class="hero__intro">
+          I build full-stack web applications and self-hosted systems.
+          Looking for summer 2027 internships in software engineering.
+        </p>
+        <nav class="hero__actions" aria-label="Primary links">
+          <a class="btn btn--secondary" href="https://github.com/jjohnsrepo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--secondary" href="assets/resume/Justin Johnson Resume.pdf" target="_blank">Resume</a>
+          <a class="btn btn--secondary" href="http://linkedin.com/in/justin-myprofile/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="hero__photo">
+        <img src="/assets/Headshot.jpeg" alt="Justin Johnson"/>
+      </div>
+      </div>
+    </div>
   </header>
 
   <main>
 
-    <section class="about">
+    <section class="about section">
       <h2>About Me</h2>
       <p>
-        I'm a computer science student with a strong interest in full-stack web development,
-        backend systems, and self-hosted infrastructure. I enjoy building practical applications
-        and experimenting with new technologies.
+        I'm a computer science student with a strong background in full-stack web development,
+        backend systems, and self-hosted infrastructure. I enjoy building end to end web apps 
+        utilizing the most modern technologies.
       </p>
-      
+      <!-- TODO: add specifics -->
+      <ul class="about__details">
+        <li><strong>School:</strong> Southern Virginia University (3.9 GPA) — expected graduation 2027</li>
+        <li><strong>Relevant coursework:</strong> Data Structures & Algorithms, Database Systems, Advanced Web Development, Advanced
+                    Programming, Platform Development, Graphic Design I, Graphic Design II</li>
+        <li><strong>Also: </strong>I run a private piano studio as well as a video digitization service</li>
+      </ul>
     </section>
 
-    <section class="projects">
-
-      <section class="written_projects">
-        <h2>Projects</h2>
-        <em style="display: block; margin-bottom: 20px;">Projects built for the most part without the use of generative AI code</em>
-        <article class="project">
-          <h3>Image Comparison Web Application</h3>
-          <p>
-            Full-stack web application built with Flask (Python) and vanilla JavaScript.
-            Implements a ranking algorithm for pairwise image comparison, with RESTful APIs,
-            JSON-based persistence, and real-time score tracking.
-          </p>
-          <a href="https://github.com/jjohnsrepo/animash" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-        <article class="project">
-          <h3>Learning Management System (LMS)</h3>
-          <p>
-            Full-stack LMS web application that imitates a school platform. Features sections,
-            pages, and editable content blocks with token-based authentication and full CRUD
-            operations using a Django REST API and JavaScript frontend.
-          </p>
-          <a href="https://github.com/jjohnsrepo/LMS" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-
-        <article class="project">
-          <h3>Local LLM Interface</h3>
-          <p>
-            Small side project built with vanilla JS, CSS, and HTML. A custom local LLM interface that uses the LM Studio API.  
-          </p>
-          <a href="https://github.com/jjohnsrepo/Local-LLM-Interface#" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-        
-
-        <article class="project">
-          <h3>Homelab Dashboard</h3>
-          <p>
-            Personal self-hosted environment featuring services like a password manager,
-            coding server, and media server. Includes a dashboard displaying system status
-            and running services.
-          </p>
-          <a href="https://glance.codeserver.space" target="_blank" rel="noopener noreferrer">Live Site</a>
-        </article>
-
-        <article class="project">
-          <h3>Weather App</h3>
-          <p>
-            Weather application using the OpenWeather API to display real-time weather data
-            for any city. Built with JavaScript and responsive design principles.
-          </p>
-          <a href="https://jjohnsrepo.github.io/weather-app/" target="_blank" rel="noopener noreferrer">Live Site</a> |
-          <a href="https://github.com/jjohnsrepo/weather-app" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-        <article class="project">
-          <h3>Piano Studio Website</h3>
-          <p>
-            Custom website for my personal piano studio. One of my first projects,
-            showcasing foundational web development skills and design.
-          </p>
-          <a href="https://justinpiano.studio/" target="_blank" rel="noopener noreferrer">Live Site</a> |
-          <a href="https://github.com/jjohnsrepo/piano-company-site" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-      </section>
-
-      <section class="ai_projects">
-        <h2>AI Projects</h2>
-        <em style="display: block; margin-bottom: 20px;">Projects built with large aid from generative AI tools</em>
-
-         <article class="project">
-          <h3>Personal Business Site</h3>
-          <p>
-            <p>Website I architected for my personal business using the Svelte framework, built with the aid of Claude Code.</p>
-          </p>
-          <a href="https://memorysafe-with-svelte-cmj9umg9k-jjohnsrepos-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site</a> |
-          <a href="https://github.com/jjohnsrepo/memorysafe-with-svelte" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-
-        <article class="project">
-          <h3>Client Website</h3>
-          <p>
-            Final project for a class. A mobile app built with react native and expo. User scans a book barcode, and the book is added to their library. Backend uses the following AWS services:
-            Cognito Auth, API Gateway, Lambda, S3, DynamoDB (NOTE: AWS services are no longer running). Built with the aid of Claude Code.
-          </p>
-          <a href="https://jjohnsrepo.github.io/Client-Website/#" target="_blank" rel="noopener noreferrer">Live Site</a> |
-          <a href="https://github.com/jjohnsrepo/Client-Website" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-        <article class="project">
-          <h3>Bookshelf Mobile App</h3>
-          <p>
-            Landing page for a local rideshare company. Includes custom branding and logo design,
-            along with a responsive and modern layout. Layout and styling with Google Gemini. 
-          </p>
-          <a href="https://github.com/jjohnsrepo/Platform-Dev-Final" target="_blank" rel="noopener noreferrer">Source Code</a>
-        </article>
-
-      </section>
-
+    <section class="skills section">
+      <h2>Skills</h2>
+      <div class="skills__grid">
+        <div class="skills__group">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <!-- TODO: update -->
+            <li>Python</li>
+            <li>JavaScript / Typescript</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Frameworks &amp; Libraries</h3>
+          <ul class="tag-list">
+            <li>React</li>
+            <li>Tailwind CSS</li>
+            <li>Next.js</li>
+            <li>Flask</li>
+            <li>Svelte</li>
+            <li>React Native</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Tools &amp; Infrastructure</h3>
+          <ul class="tag-list">
+            <li>Claude Code / Coding harnesses</li>
+            <li>AWS, Google CLoud, Asure, Vercel</li>
+            <li>Openrouter</li>
+            <li>Firebase</li>
+            <li>Cloudflare</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
+    <section class="projects section">
+      <div class="section__header">
+        <h2>Featured Projects</h2>
+        <p class="section__lead">A few projects I'm most proud of.</p>
+      </div>
+
+      <div class="project-grid project-grid--featured">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__media">
+            <img src="assets/projects/piano_studio.png" alt="Screenshot of piano studio" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Solo project</p>
+            <h3>Piano Studio Dashboard</h3>
+            <p class="project-card__outcome">Dashboard for my private piano studio</p>
+            <p>
+              Full-stack web application built with React/Vite, Tailwind CSS, and a python FastAPI backend.
+              Data is stored on a local SQLite database.
+            </p>
+            <p>Features include:</p>
+            <ul class="project-card__features">
+              <li>Piano lesson planning</li>
+              <li>Payment dashboard / tracking</li>
+              <li>Viewable lesson history</li>
+            </ul>
+            <p>
+              Site is currenly hosted on my own personal server and exposed to
+              the intenet via Cloudflare tunnel.
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>React / Vite</li>
+              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+              <li>REST API</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://github.com/jjohnsrepo/Piano-studio-dashboard-public" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://example.justinpiano.studio" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__media">
+            <img src="/assets/projects/recipe-app.png" alt="Screenshot of recipe app"/>
+            <div class="media-placeholder" aria-hidden="true">
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Solo project</p>
+            <h3>Personal recipe book</h3>
+            <p class="project-card__outcome">Input any recipe link or image and recieve a structure response</p>
+            <p>
+              Originaly requested by my wife, this solves the problem of having your recipes scattered everywhere and in different formats.
+              The user submits a link or a photo of their recipe and, using the openrouter API,sends it to a LLM and 
+              recieve a sumarized response that is always in the same format. 
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>Flask</li>
+              <li>REST API</li>
+              <li>Openrouter</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://github.com/jjohnsrepo/Recipe_App" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://recipe.codeserver.space" target="_blank">Live Demo</a>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__media">
+            <img src="/assets/projects/homelab_dashboard.png" alt="Screenshot of Homelab Dashboard" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Personal infrastructure</p>
+            <h3>Homelab Dashboard</h3>
+            <p class="project-card__outcome">Self-hosted services with a live status dashboard.</p>
+            <p>
+              Personal self-hosted environment featuring services like a password manager,
+              coding server, and media server. Includes a dashboard displaying system status
+              and running services.
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>Networking</li>
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>Cloudflare</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://glance.codeserver.space" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__media">
+            <img src="/assets/projects/client_website.png" alt="Screenshot of Client Business Site" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Client website</p>
+            <h3>Roofing Innovations</h3>
+            <p class="project-card__outcome">Landing page / Leads tracking site</p>
+            <p>
+              Originally migrated from Base44, I was comissioned to overhaul and replace the existing landing page this company was
+              using. I leveraged different AI tools to add important features such as lazy loading, a site map, and SEO optimization.
+              Site was then deployed to vercel with a firebase backend. Site is still in use by this company today
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>Reacte / Vite</li>
+              <li>Vercel</li>
+              <li>Firebase</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://roofing-innovations-migration.vercel.app" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section__header section__header--sub">
+        <h2>More Projects</h2>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-card__media project-card__media--small">
+            <img src="/assets/projects/MemorySafe.png" alt="Screenshot of MemorySafe website" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Personal project</p>
+            <h3>MemorySafe business website</h3>
+            <p class="project-card__outcome">Website for my side buisness</p>
+            <p>
+              Buisness site I built with the Svelte framework and AI tools for my side buisness called MemorySafe. 
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>Svelte</li>
+              <li>AI Tools</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://github.com/jjohnsrepo/memorysafe-with-svelte" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://memorysafe.store" target="_blank" rel="noopener noreferrer">Live Site</a>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__media project-card__media--small">
+            <img src="/assets/projects/budget-app.png" alt="Screenshot of budget App" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__role">Personal project</p>
+            <h3>Budget Progress Tracker</h3>
+            <p class="project-card__outcome">Monthly budget progress tracker that pulls data from a spreadsheet</p>
+            <p>
+              I built this because I was tired of guessing at how much I had left in each of my budget catagories. This is a simple
+              frontend that reads data from a python script that it fetches from an excel sheet. 
+            </p>
+            <ul class="tag-list tag-list--compact">
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:johnsonjustin983@gmail.com">johnsonjustin983@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/jjohnsrepo" target="_blank" rel="noopener noreferrer">github.com/jjohnsrepo</a></p>
+      <p>Open to internships, collaborations, and interesting projects.</p>
+      <ul class="contact__list">
+        <li>Email: <a href="mailto:johnsonjustin983@gmail.com">johnsonjustin983@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/jjohnsrepo" target="_blank" rel="noopener noreferrer">github.com/jjohnsrepo</a></li>
+        <li>LinkedIn: <a href="http://linkedin.com/in/justin-myprofile/">http://linkedin.com/in/justin-myprofile/</a></li>
+      </ul>
     </section>
 
   </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Justin Johnson</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
