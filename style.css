@@ -1,16 +1,74 @@
 :root {
-  --bg: #f4f6f8;
+  /* Active: warm stone + copper (swap the block below to try others) */
+  --bg: #f7f5f2;
   --surface: #ffffff;
-  --text: #1a1f26;
-  --text-muted: #5c6672;
-  --border: #dde3ea;
-  --accent: #0d6efd;
-  --accent-hover: #0b5ed7;
-  --shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
-  --shadow-hover: 0 8px 24px rgba(16, 24, 40, 0.1);
+  --text: #1c1917;
+  --text-muted: #57534e;
+  --border: #e7e5e4;
+  --muted-surface: #ede9e4;
+  --accent: #a16207;
+  --accent-hover: #854d0e;
+
+  /* Alt A — forest: --accent: #2d5a47; --accent-hover: #234539; --bg: #f4f7f5; */
+  /* Alt B — wine:  --accent: #7c2d36; --accent-hover: #651e27; --bg: #faf7f7; */
+  /* Alt C — slate: --accent: #334155; --accent-hover: #1e293b; --bg: #f8fafc; */
+
+  --shadow: 0 2px 8px rgba(28, 25, 23, 0.06);
+  --shadow-hover: 0 8px 24px rgba(28, 25, 23, 0.1);
   --radius: 12px;
   --radius-sm: 8px;
   --max-width: 880px;
+
+  --font-text: "Anthropic Sans Text", sans-serif;
+  --font-display: "Anthropic Sans Display", sans-serif;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Text";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Text-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Text";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Text-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Text";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Text-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Display";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Display-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Display";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Display-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans Display";
+  src: url("assets/fonts/Anthropic Sans-fontiko/AnthropicSans-Display-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -20,7 +78,7 @@
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-text);
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -35,6 +93,10 @@ a {
 a:hover {
   color: var(--accent-hover);
   text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
 }
 
 /* Hero */
@@ -69,7 +131,7 @@ a:hover {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
-  background: #e8edf2;
+  background: var(--muted-surface);
 }
 
 .hero__photo img {
@@ -95,7 +157,7 @@ a:hover {
   background:
     linear-gradient(135deg, transparent 48%, var(--border) 49%, var(--border) 51%, transparent 52%),
     linear-gradient(45deg, transparent 48%, var(--border) 49%, var(--border) 51%, transparent 52%),
-    #e8edf2;
+    var(--muted-surface);
   background-size: 24px 24px;
 }
 
@@ -174,7 +236,7 @@ a:hover {
 }
 
 .btn--secondary:hover {
-  background: #e8edf2;
+  background: var(--muted-surface);
   color: var(--text);
 }
 
@@ -315,7 +377,7 @@ main {
 .project-card__media {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: #e8edf2;
+  background: var(--muted-surface);
   border-bottom: 1px solid var(--border);
 }
 
@@ -356,7 +418,7 @@ main {
   background:
     linear-gradient(135deg, transparent 48%, var(--border) 49%, var(--border) 51%, transparent 52%),
     linear-gradient(45deg, transparent 48%, var(--border) 49%, var(--border) 51%, transparent 52%),
-    #e8edf2;
+    var(--muted-surface);
   background-size: 24px 24px;
 }
 
@@ -429,7 +491,7 @@ main {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--text-muted);
+  background: var(--accent);
   transform: translateY(-50%);
 }
 
